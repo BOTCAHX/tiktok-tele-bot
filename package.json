@@ -1,0 +1,21 @@
+{
+  "name": "telegram-bot",
+  "version": "0.0.1",
+  "description": "Simple Telegram Bot TikTok Downloader.",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "author": "Tio",
+  "license": "ISC",
+   "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.52.0",
+    "chalk": "^4.1.1",
+    "express": "^4.18.2",
+    "figlet": "^1.6.0",
+    "tiktokdl": "^0.0.4"
+  }
+}
