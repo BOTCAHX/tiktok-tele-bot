@@ -1,10 +1,10 @@
 {
-  "name": "telegram-bot",
+  "name": "tiktok-tele-bot",
   "version": "0.0.1",
   "description": "Simple Telegram Bot TikTok Downloader.",
-  "main": "index.js",
+  "main": "Telegraf.js",
   "scripts": {
-    "start": "index.js"
+    "start": "Telegraf.js"
   },
   "author": "Tio",
   "license": "ISC",
