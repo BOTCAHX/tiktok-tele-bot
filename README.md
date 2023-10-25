@@ -32,7 +32,7 @@ $ node Telegraf.js
 
 5. Setup a new bot on Telegram by following the [official Telegram Bot documentation](https://core.telegram.org/bots#botfather). Obtain the bot token for your newly created bot.
 
-6. Change this line with a token from hot father
+6. [Replace](https://github.com/BOTCAHX/tiktok-tele-bot/blob/5c36c6b470d85db9570be1971ba7775386ae06b9/Telegraf.js#L41) this line with a token from bot father
 
 ```javascript
 let token = 'YOUR_TOKEN_HERE'
