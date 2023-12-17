@@ -1,5 +1,6 @@
 const Telegraf = require('node-telegram-bot-api');
 const { tiktokdl } = require('tiktokdl');
+const { ttdl } = require('btch-downloader');
 const util = require('util');
 const chalk = require('chalk');
 const figlet = require('figlet');
@@ -90,11 +91,20 @@ bot.on('message', async (msg) => {
     const url = msg.text;
     try {
         const data = await tiktokdl(url);
+        const data2 = await ttdl(url)
+        const audio = data2.audio[1];
+        const { title, title_audio } = data2;
         const { video } = data;   
-        bot.sendVideo(From, video, { caption: `- Done -` });
+        await bot.sendVideo(From, video, { caption: title });
+        await sleep(3000)
+        await bot.sendAudio(From, audio, { caption: title_audio });
     } catch (error) {
         bot.sendMessage(From, 'Sorry, an error occurred while downloading the TikTok video.');
         logs(`[ ERROR ] ${From}: ${error.message}`, 'red');
     }
 }
 })
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
