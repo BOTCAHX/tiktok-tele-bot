@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 
-//express endpoint
+// express 
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   const data = {
@@ -62,6 +62,19 @@ bot.on('polling_error', (error) => {
   logs(`Polling error: ${error.message}`, 'blue');
 });
 
+// set menu
+bot.setMyCommands([
+	{
+		command: '/start',
+		description: 'Start a new conversation'
+	},
+	{
+		command: '/runtime',
+		description: 'Check bot runtime'
+	}
+ ]);
+
+// command
 bot.onText(/^\/runtime$/, (msg) => {
   const now = new Date();
   const uptimeMilliseconds = now - Start;
