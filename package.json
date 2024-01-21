@@ -4,7 +4,7 @@
   "description": "Simple Telegram Bot TikTok Downloader.",
   "main": "Telegraf.js",
   "scripts": {
-    "start": "Telegraf.js"
+    "start": "node Telegraf.js"
   },
   "author": "Tio",
   "license": "ISC",
