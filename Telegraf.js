@@ -103,7 +103,7 @@ bot.on('message', async (msg) => {
     const url = msg.text;
     try {        
         const data = await ttdl(url)
-        const audio = data.audio[1]
+        const audio = data.audio[0]
         const { title, title_audio } = data;
         await bot.sendVideo(From, data.video[0], { caption: title });
         await sleep(3000)
