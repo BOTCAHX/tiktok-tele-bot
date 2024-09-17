@@ -112,7 +112,7 @@ bot.on('message', async (msg) => {
         await bot.sendMessage(From, 'Powered by @wtffry');
     } catch (error) {
         bot.sendMessage(From, 'Sorry, an error occurred while downloading the TikTok video.');
-        console.log(`[ ERROR ] ${From}: ${error.message}`, 'red');
+        logs(`[ ERROR ] ${From}: ${error.message}`, 'red');
     }
 }
 })
